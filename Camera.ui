@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CameraClass</class>
+ <widget class="QMainWindow" name="CameraClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>955</width>
+    <height>541</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>特效Camera -By梁毅3093 薛凯元3075</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.ico</normaloff>icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="viewLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>640</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>正在加载摄像头...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="writeImg_btn">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>340</y>
+      <width>131</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>icon.png</normaloff>icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>160</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>100</y>
+      <width>231</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>效果选择</string>
+    </property>
+    <widget class="QCheckBox" name="checkBox_galssshow">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>毛玻璃</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_oldstyle">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>复古风</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sobel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>浮雕</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_gaussianBlur">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>20</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>磨皮</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_hsv">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>60</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>绘画</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sharpen">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>锐化</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_rain">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>下雨</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_faceRecognition">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>140</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>检测人脸</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sketch">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>素描</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_contrastPlus">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>180</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>对比度+</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>693</x>
+      <y>10</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_tip">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>450</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Camera.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>writeImg_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>saveImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>421</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>863</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_galssshow</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isGlassCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>729</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>668</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_oldstyle</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isOldCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>736</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>667</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_gaussianBlur</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isGaussianBlurCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>877</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>920</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sobel</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isSobelCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>718</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>668</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_hsv</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isHsvCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>828</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>920</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sharpen</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isSharpenCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>834</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_rain</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isRainCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>702</x>
+     <y>257</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>670</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_faceRecognition</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isFaceRecognitionCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>828</x>
+     <y>261</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sketch</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isSketchCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>709</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>663</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_contrastPlus</sender>
+   <signal>clicked()</signal>
+   <receiver>CameraClass</receiver>
+   <slot>isContrastPlusCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>831</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>919</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>saveImg()</slot>
+  <slot>isGlassCheck()</slot>
+  <slot>isOldCheck()</slot>
+  <slot>slot1()</slot>
+  <slot>isGaussianBlurCheck()</slot>
+  <slot>isSobelCheck()</slot>
+  <slot>isHsvCheck()</slot>
+  <slot>isSharpenCheck()</slot>
+  <slot>isRainCheck()</slot>
+  <slot>isFaceRecognitionCheck()</slot>
+  <slot>isSketchCheck()</slot>
+  <slot>isWindCheck()</slot>
+  <slot>isContrastPlusCheck()</slot>
+ </slots>
+</ui>
